@@ -6,7 +6,7 @@ import traceback
 
 
 bot = telebot.TeleBot(TOKEN)
-
+ctor
 @bot.message_handler(commands=['start', 'help'])
 def start(message: telebot.types.Message):
     text = "Чтобы начать работу, введите команду боту в следующем формате:\n\
@@ -35,6 +35,6 @@ def converter(message: telebot.types.Message):
         traceback.print_tb(e.__traceback__)
         bot.reply_to(message, f"Неизвестная ошибка:\n{e}" )
     else:
-        bot.reply_to(message,answer)
+        bot.reply_to(message, answer)
 
 bot.polling()
